@@ -19,7 +19,6 @@ func (s *SimpleServer) Server(rw http.ResponseWriter, h *http.Request) {
 func (*SimpleServer) Alive() bool {
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	num := r.Intn(100)
-	log(fmt.Sprintf("生成随机数 3333333%d", num))
 	return num > 30
 }
 
